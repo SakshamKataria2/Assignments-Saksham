@@ -10,10 +10,16 @@ There is no automated test for this one, this is more for you to understand time
 
 function calculateTime(n) {
 
-    let sum = 0;
-    for(let i = 1; i<=100; i++){
-        sum +=  i;
+    let starttime = new Date().getTime();
+    
+    let a = 0;
+    for(let i = 0; i<n; i++){
+        a++;
     }
-    time();
-    return 0.01;
+
+    let endtime = new Date().getTime();
+    time = endtime - starttime;
+    console.log("time taken to run the loop for "+n+"times is: "+time);
 }
+
+calculateTime(100);
